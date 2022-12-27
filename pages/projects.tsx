@@ -7,7 +7,6 @@ import Layout from '../components/layout';
 import Landing from '../components/landing';
 import Navigation from '../components/navbar';
 import Projects from '../components/projects';
-import About from '../components/about';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +23,6 @@ export default function Home() {
             <main className={styles.main}>
                 <Landing className={styles.landing} />
                 <Projects className={styles.projects} />
-                <About />
             </main>
         </>
     )

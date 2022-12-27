@@ -7,6 +7,75 @@
   min-height: 100vh;
 }
 
+.navigation {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.navImg {
+    width: 10vh;
+    height: auto;
+    border-radius: 50%;
+    padding: 1vh;
+}
+
+.navLinks {
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.landing{
+    height: 88vh;
+    width: 30vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.landingText {
+    
+}
+
+.landingLinks {
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.projects{
+    min-height: 100vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 13vw;
+}
+
+.about {
+    width: 40vw;
+    height: 88vh;
+}
+
+
+
 .description {
   display: inherit;
   justify-content: inherit;
