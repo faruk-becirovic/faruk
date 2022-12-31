@@ -29,10 +29,18 @@
 }
 
 .navLinks {
-    width: 15vw;
+    width: 18vw;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
+}
+
+.navLinks a:hover {
+    text-decoration: underline
+}
+
+.navLinks p {
+    font-family: 'Oswald';
+    font-size: 1.3rem;
 }
 
 .landing{
@@ -56,6 +64,31 @@
     align-content: center;
 }
 
+.landingLinks a {
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.landingLinks a:hover{
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*.landingLinks a:hover {
+    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
+    text-decoration: underline;
+}*/
+
+.landingLinks p {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 40px;
+}
+
 .projects{
     min-height: 100vh;
     width: 40vw;
@@ -72,8 +105,40 @@
 .about {
     width: 40vw;
     height: 88vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.aboutText {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.aboutText p {
+    font-size: 1.4rem;
+}
+
+.aboutButton {
+    background: white;
+    width: 180px;
+    height: 45px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aboutButton:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.aboutButton p {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 45px;
+}
 
 
 .description {

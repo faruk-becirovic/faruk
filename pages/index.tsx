@@ -8,6 +8,7 @@ import Landing from '../components/landing';
 import Navigation from '../components/navbar';
 import Projects from '../components/projects';
 import About from '../components/about';
+import Footer from '../components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,10 +23,13 @@ export default function Home() {
             </Head>
             <Navigation className={styles.navigation} />
             <main className={styles.main}>
-                <Landing className={styles.landing} />
-                <Projects className={styles.projects} />
+                <Landing
+                    className={styles.landing}
+                    text={inter.className} />
                 <About />
+                <Projects className={styles.projects} />
             </main>
+            <Footer />
         </>
     )
 }
