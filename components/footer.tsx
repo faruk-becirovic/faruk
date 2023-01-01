@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export default function Footer() {
+export default function Footer(props: any) {
     let linkedin: string = "https://www.linkedin.com/in/faruk-becirovic-57b7101a0/";
     let github: string = "https://github.com/faruk-becirovic";
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import profileImage from '../public/IMG_1515.jpg';
 
-export default function Navigation(props) {
+export default function Navigation(props: any) {
     return (
         <div className={styles.navigation}>
             <div className={styles.navHeader}>

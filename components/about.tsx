@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-export default function About(props) {
+export default function About(props: any) {
     return (
         <div className={styles.about} id={props.id}>
             <div className={styles.aboutText}>

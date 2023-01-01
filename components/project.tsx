@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Project(props) {
+export default function Project(props: any) {
 
     return (
         <Link

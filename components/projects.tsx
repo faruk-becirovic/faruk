@@ -1,6 +1,6 @@
 import Project from '../components/project';
 
-export default function Projects(props) {
+export default function Projects(props: any) {
     return (
         <div className={props.className} id={props.id}>
             <div className={props.cards}>

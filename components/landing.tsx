@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-export default function Landing(props) {
+export default function Landing(props: any) {
     return (
         <div className={props.className} id={props.id}>
             <div className={styles.center}>
