@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Oswald } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
 import Layout from '../components/layout';
@@ -8,7 +8,7 @@ import Landing from '../components/landing';
 import Projects from '../components/projects';
 import About from '../components/about';
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Oswald({ subsets: ['latin'] })
 
 export default function Home() {
     return (
@@ -26,11 +26,13 @@ export default function Home() {
                 <link rel="icon" href="/icon.png" />
             </Head>
             <Layout>
-                <main className={styles.main}>
+                <main
+                    className={styles.main + " " + font.className}
+                >
                     <Landing
                         id="home"
                         className={styles.landing}
-                        text={inter.className} />
+                    />
                     <About id="about" />
                     <Projects
                         id="projects"
