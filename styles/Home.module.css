@@ -53,10 +53,6 @@
     justify-content: space-around;
 }
 
-.landingText {
-    
-}
-
 .landingLinks {
     display: flex;
     width: 30vw;
@@ -65,23 +61,20 @@
 }
 
 .landingLinks a {
+    top: 0px;
     width: 120px;
     height: 40px;
     border-radius: 12px;
+    /*background: white;*/
 }
 
 .landingLinks a:hover{
     width: 120px;
     height: 40px;
     border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(var(--fill-rgb));
+    box-shadow: 0 2px 4px 0 rgba(var(--card-rgb)), 0 3px 10px 0 rgba(var(--card-border-rgb));
 }
-
-/*.landingLinks a:hover {
-    text-shadow: 2px 2px 16px rgba(0, 0, 0, 0.4);
-    text-decoration: underline;
-}*/
 
 .landingLinks p {
     font-size: 1.3rem;
@@ -128,16 +121,20 @@
 }
 
 .aboutButton {
-    background: white;
+    background: rgba(var(--fill-rgb));
     width: 180px;
     height: 45px;
     margin: auto;
     border-radius: 12px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(var(--card-rgb)), 0 6px 10px 0 rgba(var(--card-border-rgb));
 }
 
 .aboutButton:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(var(--card-rgb)), 0 3px 10px 0 rgba(var(--card-border-rgb));
+}
+
+.aboutButton:active {
+    box-shadow: 0 1px 2px 0 rgba(var(--card-rgb)), 0 1px 2px 0 rgba(var(--card-border-rgb))
 }
 
 .aboutButton p {
@@ -148,7 +145,7 @@
 
 .footer {
     min-height: 45vh;
-    background: #050533; /*alt #08313a */
+    background: rgb(var(--card-rgb));
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -166,60 +163,19 @@
 
 .footer p {
     font-size: 1.3rem;
-    color: #e34234;
+    color: rgb(var(--background-end-rgb));
 }
 
 .footer a:hover {
-    color: #e34234;
+    color: rgb(var(--background-end-rgb));
     text-decoration: underline;
 }
 
 .notice p {
     position: relative;
     top: 50px;
-    color: #0d698b;
     text-align: center;
     font-size: 0.9rem;
-}
-
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
 }
 
 .card {
@@ -249,25 +205,21 @@
 }
 
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  
 }
 
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
-  width: 480px;
-  height: 360px;
+  width: 286px;
+  height: 236px;
   margin-left: -400px;
 }
 
 .center::after {
   background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
+  width: 375px;
+  height: 136px;
   z-index: -1;
 }
 
@@ -280,52 +232,6 @@
   transform: translateZ(0);
 }
 
-.logo,
-.thirteen {
-  position: relative;
-}
-
-.thirteen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
-  margin-left: 16px;
-  transform: translateZ(0);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
-}
-
-.thirteen::before,
-.thirteen::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* Conic Gradient Animation */
-.thirteen::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
-}
-
-/* Inner Square */
-.thirteen::after {
-  inset: 0;
-  padding: 1px;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
-  background-clip: content-box;
-}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -339,27 +245,10 @@
   }
 }
 
-@media (prefers-reduced-motion) {
-  .thirteen::before {
-    animation: none;
-  }
-
-  .card:hover span {
-    transform: none;
-  }
-}
-
 /* Mobile */
 @media (max-width: 700px) {
   .content {
     padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
   }
 
   .card {
@@ -379,76 +268,11 @@
     height: 300px;
   }
 
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
   }
 }
