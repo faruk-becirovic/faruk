@@ -89,9 +89,15 @@
     line-height: 40px;
 }
 
-.projects{
-    min-height: 100vh;
+.projectsSection{
+    height: 88vh;
     width: 40vw;
+}
+
+.projects {
+    position: relative;
+    top: 15%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -138,6 +144,42 @@
     font-size: 2rem;
     text-align: center;
     line-height: 45px;
+}
+
+.footer {
+    min-height: 45vh;
+    background: #050533; /*alt #08313a */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3.5%;
+}
+
+.footer ul {
+    margin: auto;
+    width: 60vw;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer p {
+    font-size: 1.3rem;
+    color: #e34234;
+}
+
+.footer a:hover {
+    color: #e34234;
+    text-decoration: underline;
+}
+
+.notice p {
+    position: relative;
+    top: 50px;
+    color: #0d698b;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 

@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
-export default function About() {
+export default function About(props) {
     return (
-        <div className={styles.about}>
+        <div className={styles.about} id={props.id}>
             <div className={styles.aboutText}>
                 <p>
                     My name is Faruk Becirovic. I currently live in
@@ -15,7 +16,8 @@ export default function About() {
                 <p>
                     Currently, I am a student at the Faulty of
                     Engineering and Natural Sciences of the
-                    The International University of Sarajevo. I study
+                    The International University of Sarajevo.
+                    I study
                     Software Engineering, which is something I was
                     interested in for years. I am currently in my
                     final year of studies.
@@ -48,7 +50,7 @@ export default function About() {
                 </p>
             </div>
             <div className={styles.aboutButton}>
-                <a><p>Résumé</p></a>
+                <Link href="/resume"><p>Résumé</p></Link>
             </div>
         </div>
     );

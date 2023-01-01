@@ -24,10 +24,16 @@ export default function Home() {
             <Navigation className={styles.navigation} />
             <main className={styles.main}>
                 <Landing
+                    id="home"
                     className={styles.landing}
                     text={inter.className} />
-                <About />
-                <Projects className={styles.projects} />
+                <About id="about" />
+                <Projects
+                    id="projects"
+                    className={styles.projectsSection}
+                    cards={styles.projects}
+                    card={styles.card}
+                />
             </main>
             <Footer />
         </>

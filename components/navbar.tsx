@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import profileImage from '../public/IMG_1515.jpg';
 
 export default function Navigation(props) {
     return (
-        <div className={props.className}>
+        <div className={styles.navigation}>
             <div className={styles.navHeader}>
                 <Image
                     src={profileImage}
@@ -14,9 +15,9 @@ export default function Navigation(props) {
                 <p>Faruk <br /> Becirovic </p>
             </div>
             <div className={styles.navLinks}>
-                <a><p>Projects </p></a>
-                <a><p>About me</p></a>
-                <a><p>Reach out</p></a>
+                <Link href="/#projects"><p>Projects </p></Link>
+                <Link href="/#about"><p>About me</p></Link>
+                <Link href="/#contact"><p>Reach out</p></Link>
             </div>
         </div>
     );
