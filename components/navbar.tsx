@@ -15,9 +15,9 @@ export default function Navigation(props: any) {
                 <p>Faruk <br /> Becirovic </p>
             </div>
             <div className={styles.navLinks}>
-                <Link href="/#projects"><p>Projects </p></Link>
-                <Link href="/#about"><p>About me</p></Link>
-                <Link href="/#contact"><p>Reach out</p></Link>
+                <a href="/#projects"><p>Projects </p></a>
+                <a href="/#about"><p>About me</p></a>
+                <a href="/#contact"><p>Reach out</p></a>
             </div>
         </div>
     );
