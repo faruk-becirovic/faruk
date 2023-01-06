@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 1rem;
   min-height: 100vh;
+  max-width: 100vw;
 }
 
 .resume {
@@ -19,4 +20,27 @@
 .section {
     position: relative;
     margin-bottom: 5vh;
+}
+
+.list {
+    max-width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+
+    .resume {
+	position: relative;
+	width: 80vw;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    }
+
+    .section {
+	postion: relative;
+	margin: auto;
+	margin-bottom: 5vh;
+    }
 }
