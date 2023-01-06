@@ -27,6 +27,18 @@
     margin: auto;
 }
 
+.lists {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+
+.resume ul {
+    margin-bottom: 2vh;
+}
+
 @media (max-width: 800px) {
 
     .resume {
@@ -43,4 +55,11 @@
 	margin: auto;
 	margin-bottom: 5vh;
     }
+
+    .lists {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
 }

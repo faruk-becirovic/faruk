@@ -82,7 +82,8 @@ export default function Home() {
                             students that requires them to learn and
                             apply principles of full-stack software
                             development using Agile Methodology.
-                            <ul className={styles.list}>Technologies used:
+                            <ul className={styles.list}>
+                                <h3>Technologies used:</h3>
                                 <li>Java programming language,</li>
                                 <li>Quarkus framework,</li>
                                 <li>Dart programming language,</li>
@@ -119,8 +120,43 @@ export default function Home() {
                             Herzegovina achieve their full potential.
                         </Experience>
                         <h1>Skills</h1>
+                        <div className={styles.lists}>
+                            <ul>
+                                <h3>Programming Languages:</h3>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>Julia</li>
+                                <li>R</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                            </ul>
+                            <ul>
+                                <h3>Frameworks:</h3>
+                                <li>Maven</li>
+                                <li>Quarkus</li>
+                                <li>Node.js</li>
+                                <li>React</li>
+                                <li>Next.js</li>
+                                <li>Django</li>
+                                <li>NumPy</li>
+                                <li>SciPy</li>
+                                <li>Flutter</li>
+                            </ul>
+                            <ul>
+                                <h3>Interests:</h3>
+                                <li>Machine Learning</li>
+                                <li>Data Science</li>
+                                <li>Bioinformatics</li>
+                            </ul>
+                        </div>
                         <hr />
                         <h1>Languages</h1>
+                        <h3>English</h3>
+                        <p>Professional profficiency, C1</p>
+                        <h3>Bosnian</h3>
+                        <p>Native profficiency</p>
                         <hr />
                     </div>
                 </main>
