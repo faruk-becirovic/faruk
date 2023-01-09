@@ -36,8 +36,13 @@ export default function Footer(props: any) {
                     </Link>
                 </li>
                 <li>
-                    <Link href={"https://www.typescriptlang.org/docs/handbook/2/everyday-types.html"}>
+                    <Link href={"/resume"}>
                         <p>Resume</p>
+                    </Link>
+                </li>
+                <li>
+                    <Link href={"/notes"}>
+                        <p>Notes</p>
                     </Link>
                 </li>
             </ul>
