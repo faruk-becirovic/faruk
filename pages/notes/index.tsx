@@ -6,7 +6,7 @@ import styles from '../../styles/Notes.module.css';
 import Note from '../../components/project';
 import Layout from '../../components/layout';
 
-const font = Oswald({ subsets: ['latin'] })
+const font = Oswald({ subsets: ['latin'] });
 
 export default function Notes() {
     return (
@@ -36,21 +36,21 @@ export default function Notes() {
                     <div className={styles.notes}>
                         <Note
                             className={styles.card}
-                            projectTitle="Project 1"
-                            projectDesc="Short description of a project"
-                            link="https://github.com/faruk-becirovic?tab=repositories"
+                            projectTitle="Numerical Analysis"
+                            projectDesc="A class about the numerical solutions to various mathematical problems"
+                            link="/notes/NumericalAnalysis"
                         />
                         <Note
                             className={styles.card}
-                            projectTitle="Project 2"
-                            projectDesc="Short description of a project"
-                            link="https://github.com/faruk-becirovic?tab=repositories"
+                            projectTitle="Cell Biology"
+                            projectDesc="A class anout structure and function of a cell"
+                            link="https://faruk-becirovic.github.io/Notes/CellBiology"
                         />
                         <Note
                             className={styles.card}
-                            projectTitle="Project 3"
-                            projectDesc="Short description of a project"
-                            link="https://github.com/faruk-becirovic?tab=repositories"
+                            projectTitle="Biological Data Analysis"
+                            projectDesc="A class about the use data analysis in biology"
+                            link="https://faruk-becirovic.github.io/Notes/BiologicalDataAnalysis.html"
                         />
                     </div>
                 </main>
