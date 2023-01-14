@@ -6,7 +6,6 @@ export default function Project(props: any) {
         <Link
             className={props.className}
             href={props.link}
-            target="_blank"
             rel="noopener noreferrer"
         >
             <h2 className={props.titleStyle}>
