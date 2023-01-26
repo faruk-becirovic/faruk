@@ -8,8 +8,11 @@ import styles from '../../styles/Notes.module.css';
 const font = Oswald({ subsets: ['latin'] });
 
 export default function Note() {
-  const router = useRouter()
-  const { pid } = router.query
+    const router = useRouter()
+    const { pid } = router.query
+
+    const res = fetch('/api/notes')
+    const posts = res.json()
 
     return(
 	<>
@@ -30,8 +33,41 @@ export default function Note() {
                     className={styles.main + " " + font.className}
                 >
                     <p>{pid}</p>
+		    <p>{posts}</p>
+		    {/*<ul>
+			{posts.map((post) => (
+			    <li>{post.title}</li>
+			))}
+			</ul>*/}
                 </main>
             </Layout>
         </>
     );
 }
+
+/*export async function getStaticProps() {
+    // Call an external API endpoint to get posts.
+    // You can use any data fetching library
+    const res = await fetch('/api/notes')
+    const posts = await res.json()
+
+    // By returning { props: { posts } }, the Blog component
+    // will receive `posts` as a prop at build time
+    return {
+	props: {
+	    posts,
+    },
+  }
+}
+
+export async function getStaticPaths(pid) {
+    return {
+	paths: [
+	    // String variant:
+	    '/notes/numerical-biology',
+	    // Object variant:
+	    { params: { slug: 'second-post', pid: 'numerical-analysis'} },
+	],
+	fallback: true,
+  }
+}*/

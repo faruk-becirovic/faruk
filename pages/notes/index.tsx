@@ -38,7 +38,7 @@ export default function Notes() {
                             className={styles.card}
                             projectTitle="Numerical Analysis"
                             projectDesc="A class about the numerical solutions to various mathematical problems"
-                            link="/notes/NumericalAnalysis"
+                            link="/notes/numerical-analysis"
                         />
                         <Note
                             className={styles.card}
