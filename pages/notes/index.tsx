@@ -52,6 +52,12 @@ export default function Notes() {
                             projectDesc="A class about the use data analysis in biology"
                             link="https://faruk-becirovic.github.io/Notes/BiologicalDataAnalysis.html"
                         />
+                        <Note
+                            className={styles.card}
+                            projectTitle="Human Computer Interaction"
+                            projectDesc="A class dealing with the good software design principles"
+                            link="https://faruk-becirovic.github.io/Notes/humcompint.html"
+                        />
                     </div>
                 </main>
             </Layout>

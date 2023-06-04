@@ -43,6 +43,17 @@
   max-width: 30vh;
 }
 
+.content {
+  width: 100%;
+  height: 50000px;
+}
+
+.frame {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);

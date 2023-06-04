@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-01-14 Sat 21:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org56bdfe0">1. A Preview of the Cell</a>
+<ul>
+<li><a href="#org18842bc">1.1. Introduction</a></li>
+<li><a href="#orgc3cf7d5">1.2. Cell Theory</a></li>
+<li><a href="#orgfdbebc5">1.3. Structure of the Cell</a></li>
+<li><a href="#orgc9bf62a">1.4. Cells; types and differentiating features</a></li>
+<li><a href="#org50e09fd">1.5. Scientific Method</a></li>
+</ul>
+</li>
+<li><a href="#orgeb3a691">2. Chemistry of the Cell</a>
+<ul>
+<li><a href="#orga5e43f8">2.1. The Importance of Carbon</a>
+<ul>
+<li><a href="#orgc655818">2.1.1. Carbon valence</a></li>
+<li><a href="#org6912ea4">2.1.2. Stability of Carbon-Containing Molecules</a></li>
+<li><a href="#orgd021527">2.1.3. Carbon-containing molecules are diverse</a></li>
+<li><a href="#orgd254807">2.1.4. Functional groups</a></li>
+<li><a href="#orge70cc6f">2.1.5. Carbon-conatining molecules can form stereoisomers</a></li>
+</ul>
+</li>
+<li><a href="#org50af1a1">2.2. The importance of water</a>
+<ul>
+<li><a href="#orge6f2fc8">2.2.1. Polarity</a></li>
+<li><a href="#org01926b3">2.2.2. Cohesion</a></li>
+<li><a href="#org5095561">2.2.3. Temperature-Stabilising Capacity</a></li>
+<li><a href="#orgb146d52">2.2.4. Water is an Exelent Solvent</a></li>
+<li><a href="#org728882c">2.2.5. The importance of semi permeable membranes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgaf2b3bf">3. Macromolecules</a>
+<ul>
+<li><a href="#org783f24f">3.1. Proteins</a>
+<ul>
+<li><a href="#orgaae3472">3.1.1. Amino Acids</a></li>
+<li><a href="#orgfdde68d">3.1.2. Structure</a></li>
+</ul>
+</li>
+<li><a href="#org1c8e274">3.2. Nucleic Accids</a>
+<ul>
+<li><a href="#org154dcfa">3.2.1. Structure</a></li>
+</ul>
+</li>
+<li><a href="#org81f7659">3.3. Polysaccharides</a>
+<ul>
+<li><a href="#orgfa47075">3.3.1. Monosaccharides</a></li>
+</ul>
+</li>
+<li><a href="#orgde5399a">3.4. Lipids</a></li>
+</ul>
+</li>
+<li><a href="#org01e6e43">4. Cells and Organells</a>
+<ul>
+<li><a href="#orge1e807b">4.1. Eucaryotic Cell Organells</a>
+<ul>
+<li><a href="#org105fbc3">4.1.1. Plasma membrane</a></li>
+<li><a href="#org5200384">4.1.2. Nucleus</a></li>
+<li><a href="#org0ff2939">4.1.3. Cytoplasm</a></li>
+<li><a href="#orgc93be16">4.1.4. Mitochondrion</a></li>
+<li><a href="#org3342d8c">4.1.5. Chloroplast</a></li>
+<li><a href="#org474874f">4.1.6. Endosomatic Reticulum</a></li>
+<li><a href="#orga1245d5">4.1.7. Golgi Complex</a></li>
+<li><a href="#orgc8d7508">4.1.8. Sectretory Vesicles</a></li>
+<li><a href="#orgc998a49">4.1.9. Lysosome</a></li>
+<li><a href="#org79ba045">4.1.10. Peroxisome</a></li>
+<li><a href="#orga1babe9">4.1.11. Vacuole</a></li>
+<li><a href="#orgb012140">4.1.12. Ribosome</a></li>
+<li><a href="#org21a2cb1">4.1.13. Extracellular Matrix</a></li>
+<li><a href="#org3455f8f">4.1.14. Cell Wall</a></li>
+<li><a href="#org5440b5b">4.1.15. Cytoskeleton</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org25c01d9">5. <span class="todo TODO">TODO</span> Microscopy</a></li>
+<li><a href="#orgdcd6002">6. Flow of Energy in the Cell</a></li>
+<li><a href="#orga3bba5e">7. Enzymes: The Catalyst of Life</a></li>
+<li><a href="#orgd55a4a2">8. Membranes: Their Structure, Function and Chemistry</a></li>
+<li><a href="#org9bb7131">9. Transport Across Membranes: Overcoming the Permeability Barrier</a>
+<ul>
+<li><a href="#org53997af">9.1. Simple Diffusion</a></li>
+<li><a href="#orgf5ceed6">9.2. Assisted Diffusion</a></li>
+<li><a href="#org3c694d5">9.3. Active Transport</a></li>
+</ul>
+</li>
+<li><a href="#org5b74773">10. The Structural Basis of Cellular Information</a>
+<ul>
+<li><a href="#orgb9cad50">10.1. Chromosomes</a>
+<ul>
+<li><a href="#org990bc91">10.1.1. Karyotype</a></li>
+<li><a href="#orgc849d6e">10.1.2. Chromatid</a></li>
+<li><a href="#org3d183cb">10.1.3. Chromosome Types</a></li>
+<li><a href="#orgfc04408">10.1.4. Homologous Chromosomes</a></li>
+</ul>
+</li>
+<li><a href="#org83ee417">10.2. Histones</a></li>
+</ul>
+</li>
+<li><a href="#org0db2d9e">11. Cell Cycle, Cellular Replication</a>
+<ul>
+<li><a href="#org9621ee3">11.1. Phases of the Cell Cycle</a></li>
+<li><a href="#orge144b0e">11.2. Mitosis</a>
+<ul>
+<li><a href="#org810af73">11.2.1. Centromere</a></li>
+<li><a href="#org16e9f33">11.2.2. Mitotic Spindle</a></li>
+<li><a href="#org9cb4965">11.2.3. Cytokinesis</a></li>
+</ul>
+</li>
+<li><a href="#orgf491318">11.3. Meiosis</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+Cell Biology
+Lecturer: dr. Jasmin Sutkovic
+</p>
+
+<div id="outline-container-org56bdfe0" class="outline-2">
+<h2 id="org56bdfe0"><span class="section-number-2">1.</span> A Preview of the Cell</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org18842bc" class="outline-3">
+<h3 id="org18842bc"><span class="section-number-3">1.1.</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The cell is basic unit of biology. Every organism either consists of a cells or it is a single cell itself.
+Understanding the cell is necessary to be able to undrestand the organism itself. Cells are not static.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3cf7d5" class="outline-3">
+<h3 id="orgc3cf7d5"><span class="section-number-3">1.2.</span> Cell Theory</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The history of Cell Biology started \(300\) years ago, when European scientist started using crude lenses to observe various materials, including biological materails, such as:
+</p>
+<ul class="org-ul">
+<li>Human blood and sperm,</li>
+<li>Plants,</li>
+<li>Tree bark</li>
+<li>Mold etc.</li>
+</ul>
+
+<p>
+Robert Hooke was among them. He used the lense to observe a piece of cork. He observed thin walls separating the small pieces of the cork. He named those pieces cells (lat. <i>cellula</i> - little room).
+Anthonie Van Leeuwenhoek was first to use small lenses to observe living cells.
+Schwan obsreved animal and plant cells and came to conclusion that they share same fundamental structure. Based on his observations, in 1839, Schwan developed his unified cell theory, with two basic principles:
+</p>
+<ol class="org-ol">
+<li>All organisms consist of one or more cells.</li>
+<li>Cell is basic unit of structure for all organisms.</li>
+</ol>
+
+<p>
+In 1855, Virchow made conclusion that all cells arose from the divison of the preexisting cells, thius adding another princilple to the Schwan's theory:
+</p>
+<ol class="org-ol">
+<li>All cells arise only from preexisting cells.</li>
+</ol>
+
+<p>
+Thus, the cell is not only basic unit of structure of living organisms, it is also basic unit of reproduction for all living organisms.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdbebc5" class="outline-3">
+<h3 id="orgfdbebc5"><span class="section-number-3">1.3.</span> Structure of the Cell</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+At the basic level all cells have some common features. All cells have:
+</p>
+<dl class="org-dl">
+<dt>Chromosomes</dt><dd>cary genes,</dd>
+<dt>Rybosomes</dt><dd>make proteins,</dd>
+<dt>Cytosol</dt><dd>semifluid substance,</dd>
+<dt>Plasma membrane,</dt><dd></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgc9bf62a" class="outline-3">
+<h3 id="orgc9bf62a"><span class="section-number-3">1.4.</span> Cells; types and differentiating features</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The basic structural and functional unit of every organism is:
+</p>
+<ol class="org-ol">
+<li>Procaryotic cell, or</li>
+<li>Eucaryotic cell.</li>
+</ol>
+
+<p>
+Bacteria and Archaea are the only types of organisms that consist of procaryotic cells. While other organisms; Protists, Fungi, animals, and plants consist of eucaryotic cells.
+</p>
+
+<p>
+Eucaryotic cells are characterised by having:
+</p>
+<ul class="org-ul">
+<li>DNA nucleus bounded my membranous nuclear envelope,</li>
+<li>Membrane bounded organells,</li>
+<li>Cytoplasm in the regioon bethween the plasma membrane and the nucleus.</li>
+</ul>
+
+<p>
+Typically, eucaryotic cells are significantlly larger that procaryotic cells.
+</p>
+
+<p>
+Procaryotic cells are characterised by having:
+</p>
+<ul class="org-ul">
+<li>No nucleus,</li>
+<li>No membrane bound organells,</li>
+<li>DNA resides in the unbounded region of the cell called nucleoide,</li>
+<li>Cytoplasm which is bounded by plasma membrane.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org50e09fd" class="outline-3">
+<h3 id="org50e09fd"><span class="section-number-3">1.5.</span> Scientific Method</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Science is not a collection of facts but a process of discovering answers to questions about the natural world. Answering those questions relies on the use of the scientific method,
+which involves creating hypotheses, that can be tested for validity by collection of data through well-designed and controlled experiments. Science is based on consistency and reproducibillity.
+As hypotheses become more accepted, they become referred to as a theory, and as theories become more accepted they become referred to as laws. However, theories and laws can be modified,
+exteded or even refuted as new facts come to light.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb3a691" class="outline-2">
+<h2 id="orgeb3a691"><span class="section-number-2">2.</span> Chemistry of the Cell</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga5e43f8" class="outline-3">
+<h3 id="orga5e43f8"><span class="section-number-3">2.1.</span> The Importance of Carbon</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Carbon atom is the most important atom in biologic molecules.
+</p>
+</div>
+
+<div id="outline-container-orgc655818" class="outline-4">
+<h4 id="orgc655818"><span class="section-number-4">2.1.1.</span> Carbon valence</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Carbon has valence of \(4\), which allows carbon to form chemical bonds with \(4\) other atoms. This means that carbon atom lacks \(4\) electrons in the outermost orbital to me at it's most stable state.
+Carbon atoms tend to associate with eachother or with other electron-defficient atoms, an arangement in which the share pairs of electrons, one from each atom. Such sharing means that carbon forms
+covalent bonds. Carbon is most likely to form covalent bonds with other carbon atoms or with oxygen, hidrogen, nitrogen, and sulfur.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6912ea4" class="outline-4">
+<h4 id="org6912ea4"><span class="section-number-4">2.1.2.</span> Stability of Carbon-Containing Molecules</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+The stability of organic molecules is the property of the favorable electronic configuration of each carbon atom in the molecule. This stability is expressed as bond energy - the amount of energy required to
+brake \(1\) <i>mol</i> of such bonds. Bond energy is usually expressed as <i>calories per mole</i> (<i>cal/mol</i>), where a calorie is the amount of energy needed to raise the temperature of a \(1\) <i>g</i> of water by \(1\) &deg;C and a kilo-calorie <i>kcal</i> is
+equal to \(1000\) <i>cal</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd021527" class="outline-4">
+<h4 id="orgd021527"><span class="section-number-4">2.1.3.</span> Carbon-containing molecules are diverse</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Carbon-containing compounds are characterised by great diversity of molecules that can be generated with few different elements. The diversity of carbon stems from its tetravalent nature, that is,
+the abillity of each carbon atom to form covalent bonds with four other atoms. Because one or more of these bonds can be formed with other carbon atoms, molecules consisting of long chains or even ring containing
+carbon atoms can be formed. The molecules containing chain-linked carbon atom can have firther increase in diversity by the presence of doule bonds in the carbon-carbon chain. Furthermore these chains often
+contain other elements. One such element is hydrogen, these molecules are very common in the nature and are called hydrocarbons.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd254807" class="outline-4">
+<h4 id="orgd254807"><span class="section-number-4">2.1.4.</span> Functional groups</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+Hydrocarbons play a limited role in the biological systems. However, great number of compounds can be formed that, in addition to carbon and hydrogen, can contain one or more atoms of oxygen, nitrogen,
+phosphorus, or sulphur. These atoms are often part of various functional Groups. Functional groups are specific arrangement of atoms that confer specific chemical properties on the molecules they are atached to.
+</p>
+
+<p>
+Some of these functional groups are:
+</p>
+<ol class="org-ol">
+<li>Negatively charged groups:
+<ul class="org-ul">
+<li>Carboxyl</li>
+<li>Phosphate</li>
+</ul></li>
+<li>Neutral but polar groups:
+<ul class="org-ul">
+<li>Hydroxyl</li>
+<li>Sulfhydryl</li>
+<li>Carbonyl</li>
+<li>Aldehyde</li>
+</ul></li>
+<li>Positively charged groups:
+<ul class="org-ul">
+<li>Amino</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge70cc6f" class="outline-4">
+<h4 id="orge70cc6f"><span class="section-number-4">2.1.5.</span> Carbon-conatining molecules can form stereoisomers</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<p>
+Carbon-containing molecules can have even furher capacity for diversity. Carbon atom has a tetrahedral structure. When four different atoms, or groups of atoms, are bonded to the four corners of the structure
+two different spatial configurations are possible. Despite having the same structural formula they are not superimposale, and are in fact mirror images of each other. Such structural cariations of the same
+compond are known as stereoisomers. Carbon atom with four different substituents is called asymetric carbon atom because two stereoisomers are posible for each asymetric carbon atom. Compound with \(n\)
+asymetric carbon atoms will have \(2^n\) possible stereoisomers.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50af1a1" class="outline-3">
+<h3 id="org50af1a1"><span class="section-number-3">2.2.</span> The importance of water</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+The water has a biologically important role. Water acts as an universal solvent in biological systems. Water is the most abundant component in cells and organisms. Typical cell contains around 75-58% of
+water by weight. It is important to understand the chemical properties of water in order to fully appriciate and understand the role it plays in the biological systems.
+</p>
+</div>
+
+<div id="outline-container-orge6f2fc8" class="outline-4">
+<h4 id="orge6f2fc8"><span class="section-number-4">2.2.1.</span> Polarity</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Unequal distribution of electrons within a water molecule give it it's polarity. Polarity can be defined as uneven distribution of charge within a molecule. In order to understant the polarity of water the
+shape of the molecule needs to be considered. The two hydrogen atoms are bonded to an oxygen atom at an angle of exactly 104.5&deg;. This angele causes the polarity of water. Evendough the molecule as a whole is
+uncharged, the oxygen atom is highly electronegative, giving the part of the molecule with the oxygen partial negative charge, and correspondinglly the oposite side has partial electropositivity.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org01926b3" class="outline-4">
+<h4 id="org01926b3"><span class="section-number-4">2.2.2.</span> Cohesion</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Because of its high polarity the water molecules are atracted to eachother and tend to orient themselves in a speciffic way. The electronegatively charged oxygen tends to form bonds with the positively charged
+hydrogen atoms in the adjecent water molecule. They form bonds called hydrogen bonds, a type of noncovalent bond that are much weaker in comparison to the covalent bond, around one-tenth as strong.
+As a result of these bonds the water molceule can associate itself with at least three adjencent water mollecules and thus form extendive three-dimensional netork of hydrogen-bonded molecules. These bonds are
+being constantly broken and reformed. This tendency of water to form hydrogen bonds is what makes the water so highly cohesive. This cohesiveness accounts for the high surface tension of the water, high boiling
+point, high speciffic heat and high heat of vapourisation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5095561" class="outline-4">
+<h4 id="org5095561"><span class="section-number-4">2.2.3.</span> Temperature-Stabilising Capacity</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+The existane of hydrogen bonds between water molecules give water high temperature stabilising capacity. Due to the hydrogen bonds, water has high speciffic heat. Speciffic heat is the amount of heat a substance
+needs to absorb per gram to increase its temperature 1 &deg;\(C\). The speciffic heat of water is 1 cal/g. In other liquids this heat would increase the motion of the solvent molecules and therfore would lead to
+increse in temperature. In water, however this energy is spent to breake the weak hydrgen bonds between the water molecules. This causes water to have signifficantly higher speciffic heat compared to other
+liquids. This also cause water to have high heat of vapourisation, which is the amount of energy needed to convert 1 g of liquid into vapour. These properties give water its cooling capabillity, which is very
+important sice cellular metabolic activities release high amount of heat energy and would othervise pose a serious overheating problem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb146d52" class="outline-4">
+<h4 id="orgb146d52"><span class="section-number-4">2.2.4.</span> Water is an Exelent Solvent</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+From biological perspective, one of the most important properties of water is its exellence as a general solvent. A solvent is a fluid in which other subsances, solutes, can be dissolved. Water is important
+solvent because its capacity to dissolve large number of solutes. This characteristic is caused by the waters high polarity. Most molecules in cells are also polar, meaning they readily form hydrogen bonds or
+ioniq bonds with water mlecules. Molecules that readily dissolve in the warter are dubbed hydrophullic, while molecules that are not very soluable in water are called hydrophobic. Most small organic molecules
+are hydrophillic, such as sugars, organic accids, and some amino accids. Lipids and some proteins, such as those found in biological membranes, are hydrophobic. Some macrmolecules such as some proteins posess
+both hydrophillic and hydrophobic qualities. That is certain speciffic reagions of the molecule have affinity for water while others do not. In general polar molecules and ions are hydrophillic while non polar
+molecules are hydrophobic.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org728882c" class="outline-4">
+<h4 id="org728882c"><span class="section-number-4">2.2.5.</span> The importance of semi permeable membranes</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+Every cell needs some sort of physical barrier to keep its contents in and external materials out. A cell also need some sort of control over the exchange between the internal environment and the extracellular
+environment. Such membrane must be impermeable to most molecules and ions found within the cell but also allow exchenge between cell and its environment. Also the membrane must not be soluable in water but must
+be able to let the water pass through because the water is basic solvent if the cell and must be able to flow in and put as needed. Cellular membrane is essentially hydrophobic permeabillity barrier that consists
+of:
+</p>
+<ul class="org-ul">
+<li>phospholipids,</li>
+<li>glycolipids,</li>
+<li>membrane proteins,</li>
+<li id="sterols">most organisms, other than bacteria;
+<dl class="org-dl">
+<dt>cholesterol</dt><dd>animal cell</dd>
+<dt>phytosterol</dt><dd>plant cell</dd>
+<dt>ergosterol</dt><dd>fungi</dd>
+</dl></li>
+</ul>
+
+<p>
+Most membrane lipids and proteins are not simply hydrophobic or hydrophillic, instead, they have both regions and are therefore referred to as amphipatic molecules.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf2b3bf" class="outline-2">
+<h2 id="orgaf2b3bf"><span class="section-number-2">3.</span> Macromolecules</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A polymer is a long molecule consisting of many similar building-blocks molecules. These building-blocks of polymers are called monomers. Three of the four classes of life's organic molecules are polymers:
+</p>
+<ol class="org-ol">
+<li>Carbohydrates</li>
+<li>Proteins</li>
+<li>Nucleic accids</li>
+</ol>
+</div>
+
+<div id="outline-container-org783f24f" class="outline-3">
+<h3 id="org783f24f"><span class="section-number-3">3.1.</span> Proteins</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Proteins are a class of molecules present in all cells and all parts of the cell. Based on function proteins can be divided into nine classes.
+</p>
+<ol class="org-ol">
+<li>Enzymes,  act as catalysts, increasing the rate at which thousands of chemical reactions crucial to the life of the cell occur.</li>
+<li>Structural proteins provide physical support and shape to cells and organells within cells.</li>
+<li>Motillity proteins play key role in the contraction and movement of cells.</li>
+<li>Reuglatory proteins are responsible for the control and coordination of cellular functions.</li>
+<li>Transport proteins are responsible for the transport of materials into, out of, and within the cell.</li>
+<li>Hormonal proteins conduct exchange of information between the cell and the distant parts of the organism.</li>
+<li>Receptor proteins enable cells to respond to chemical stimuli from the environment.</li>
+<li>Defensive proteins privide protection from the disease.</li>
+<li>Storage proteins act as reservoirs of amino accids.</li>
+</ol>
+</div>
+
+<div id="outline-container-orgaae3472" class="outline-4">
+<h4 id="orgaae3472"><span class="section-number-4">3.1.1.</span> Amino Acids</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Proteins are linear polymers of amino accids. Evendough around 60 amino accids are typically present in the cell, only around 20 of them regularlly participate in the synthesis of proteins. Protein may contain
+all or most of the 20 deifferent amino accids, their proportions may vary gratly, and no two proteins share the same amino accid sequence. Every amino accid shares the same basic structure, with a carboxyl group,
+an amino group, hydrogen atom, and a side chain known as R group. All are atached to central carbon atom known as <i>&alpha; carbon</i>. Only exception is glycine whose R group is a single hydrogen atom. All amino accid
+have an asymemtric carbon atom, meaning they exist in two stereoisomeric states, called <i>L-</i> and <i>D-</i> amino accids. Both kinds exist in nature but only L-amino accids occur in proteins. Since all amino accids
+have <i>carboxyl</i> and <i>amino group</i>, their different properties come from the variance of the <i>R</i> group, which can range from a single hydrogen atom to relatively complex aromatic groups. Nine of the \(20\) amino accids have
+nonpolar, hydrophobic <i>R</i> groups. The remaining \(11\) amino accids have a hydrophillic <i>R</i> group, which can either be distinctly polar, or actually charged at the pH values characteristic of the cells.
+</p>
+
+<p>
+The process of stringing individual amino accids together into linear polymer involves the stepwise addition of each new amino accid to the growing chain by a <i>dehydration</i> (or <i>condensation</i>) <i>reaction</i>.
+As three atoms comprising H<sub>2</sub>0 are removed, the carboxyl carbon of one amino accid and the nitrogen of a second are linked directly. This covalent <i>C-N</i> bond linking the two amino accids is known as a
+<b>peptide bond</b>.  This process of elongating amino accids is often called <i>protein synthesis</i>, the term is not entirely accurate since the product of amino accid polymerisation is not protein but a <b>polypeptide</b>.
+</p>
+
+<p>
+A protein is a polypeptide chain that has a unique, stablem three-dimensional shape, and is biologically active as a result. Some proteins consist of a single polypeptide and are called <b>monomeric proteins</b>.
+Proteins that consist of two or more polypeptides, known as <i>polypeptide subunits</i> are called <b>multimeric proteins</b>.
+</p>
+
+<p>
+Polymers are disassembled to monomers by <i>hydrolysis</i>, a reaction that is a reverse of a dehydration reaction.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdde68d" class="outline-4">
+<h4 id="orgfdde68d"><span class="section-number-4">3.1.2.</span> Structure</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+The structure of proteins is usually described in four levels of hierachical organisation:
+</p>
+<dl class="org-dl">
+<dt>primary</dt><dd>amino accid sequence</dd>
+<dt>secondary</dt><dd>local interactions between amino accid residues that are close toogether along the chain</dd>
+<dt>tertiary</dt><dd>long-distance interactions along the streches of amino accid residues from different part of the molecule</dd>
+<dt>quarternary</dt><dd>interaction of two or more polypeptides to form a single multimeric protein</dd>
+</dl>
+
+<p>
+Primary structure refers to amino accid sequence, while the other tree concern the interactions between the amino accids and the residue, and all three of them are dictated by the primary structure.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c8e274" class="outline-3">
+<h3 id="org1c8e274"><span class="section-number-3">3.2.</span> Nucleic Accids</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Nucleic accids are molecules that are have a role of storing, transmitting, and expressing genetic information. Nucleic accids are linear polymers of nucleotides strung together in a genetically determined
+order that is critical to their role as informational macromolecules. The two major types of nucleic accids are <b>DNA (deoxyribonucleic accid)</b> and <b>RNA (ribonucleic accid)</b>. DNA and RNA differ in their chemistry
+and their role in the cell. RNA consist of five-carbon sugar <i>ribose</i>, while DNA has closely related sugar <i>deoxyribose</i>. DNA serves as the repository of genetic information, while RNA has several different roles
+releted to the expression of the genetic information.
+</p>
+
+<p>
+The RNA has three main types:
+</p>
+<ol class="org-ol">
+<li>mRNA: messenger RNA,</li>
+<li>rRNA: ribosomal RNA,</li>
+<li>tRNA: transfer RNA</li>
+</ol>
+
+<p>
+Along these three there are multitude of other smaller RNA types discovered in the cell. These <i>micro RNA</i> (miRNA) function as regulatory molecules in the cell
+</p>
+</div>
+
+<div id="outline-container-org154dcfa" class="outline-4">
+<h4 id="org154dcfa"><span class="section-number-4">3.2.1.</span> Structure</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+The monomeric units of nucleic accids are nucleotides. DNA and RNA have four different nucleotides each. Each nucleotide consists of a five-carbon sugar which has a phosphate group attached to it and a
+nitrogen-containing arromatic base. The sugar is <i>D-ribose</i> (RNA), or <i>D-deoxyribose</i> (DNA). The phosphate is joined by phosphoester bond to the \(5'\) carbon of the sugar, while the base is attached to \(1'\) carbon.
+The base can be either <i>purine</i> or <i>pyrimidine</i>.
+</p>
+
+<p>
+Purines are:
+</p>
+<ol class="org-ol">
+<li>adenine (A)</li>
+<li>guanine (G)</li>
+</ol>
+
+<p>
+The pyrimidines are:
+</p>
+<ol class="org-ol">
+<li>cytosine (C)</li>
+<li>thymine (T); in case of DNA</li>
+<li>uracil (U); replaces tymine in the RNA</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org81f7659" class="outline-3">
+<h3 id="org81f7659"><span class="section-number-3">3.3.</span> Polysaccharides</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Polysaccharides are long-chain polymers of sugar and sugar derivatives. They usually consist of a single kind repeting unit or sometimes an alternating patern of two kinds.
+</p>
+</div>
+
+<div id="outline-container-orgfa47075" class="outline-4">
+<h4 id="orgfa47075"><span class="section-number-4">3.3.1.</span> Monosaccharides</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+The repeting units of polysaccharides are simple sugars called <i>monosaccharides</i>. A sugar can be defined as aldehyde or ketone that has two or more hydroxyl groups. Thus there are two types of sugars:
+</p>
+<ol class="org-ol">
+<li>aldosugars, with terminal carbonyl group,</li>
+<li>ketosugars, with an internal carbonyl group,</li>
+</ol>
+
+<p>
+The single most common monosaccharide in the biological world has been the <i>aldohexose D-glucose</i>.
+</p>
+
+<p>
+In addition to free monosaccharides and long polysaccharides, glucose also occurs in nature as <i>disaccharides</i>, which consist of two monosaccharide units linked covalently. The three common disaccharides are:
+</p>
+<dl class="org-dl">
+<dt>Maltose</dt><dd><i>malt sugar</i>, consisting of two glucose units linked together,</dd>
+<dt>Lactose</dt><dd><i>milk sugar</i>, glucose linked to galactose,</dd>
+<dt>Sucrose</dt><dd><i>common table sugar</i>, glucose linked to fructose.</dd>
+</dl>
+
+<p>
+Disaccharides are formed by dehydration reaction in which two monosaccharides are linked together by the elimination of water. The resulting <b>glycosidic bond</b> is characteristic of the linkages between sugars.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde5399a" class="outline-3">
+<h3 id="orgde5399a"><span class="section-number-3">3.4.</span> Lipids</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Lipids differ from other macromolecules because they are not formed by the linear polymerisation. However, they are regarded macromolecules because of their high molecular weight and important role in cellular
+structures. Lipids constitute a heterogeneous category of cellular components that resemble one another. Their distiguishing feature is their hydrophobic nature. Lipids are, however, soluable in nonpolar solvents
+such as chlorophorm and ether. They may, also, have various different chemical characteristics and structures, and play different roles accordingly. They have three main roles in the cell:
+</p>
+<ul class="org-ul">
+<li>energy storage,</li>
+<li>membrane structure,</li>
+<li>speciffic bilogical functions, such as transmission of signals in the cell.</li>
+</ul>
+
+<p>
+Based on their chemical structure, lipids can be divided in several classes:
+</p>
+<ol class="org-ol">
+<li>fatty accids</li>
+<li>triacylglycerols,</li>
+<li>phospholipids,</li>
+<li>glycolipids,</li>
+<li>steroids,</li>
+<li>terpenes.</li>
+</ol>
+
+<p>
+Fatty accids consist of long hydrocarbon chains of <i>12-20</i> carbon atoms with a carboxylic accid group at one end. Thet are energy rich molecules found in triacylglycerols that make up animal fat and vegetable oils.
+They are also found in the phospholipids found in cellular membranes.
+</p>
+
+<p>
+Phosphoglycerides and sphingolipids are types of phospholipids that make up the lipid layer of biological membranes.  They are amphipatic molecules with two hydrophobic fatty accid chains and a polar
+phosphate-containing head group.
+</p>
+
+<p>
+Glycolipids are similar to phospholipids but they contain a polar carbohydrate group instead of phosphate. They are found on the outer surface of the membranes, where they play a role in cell reckognition.
+</p>
+
+<p>
+Other important cellular lipids are steroids, which include cholesterol and several sex hormones, and the terpenes, which include vitamin A and some important coenzymes.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org01e6e43" class="outline-2">
+<h2 id="org01e6e43"><span class="section-number-2">4.</span> Cells and Organells</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Based on the structureal differences of their cells organisms have been divided into two broad groups:
+</p>
+<dl class="org-dl">
+<dt>Eucaryotes</dt><dd>plants, animals, fungi, alagae, and protozoa; these cells have a true membrane-bounded nucleus,</dd>
+<dt>Prokaryotes</dt><dd>bacteria, and archaea; these cells don't have true membrane-bounded nucleus, suggesting evolutionarilly earlier form of life.</dd>
+</dl>
+
+<p>
+This way of classification of cells has attracted some crithisism, because it implies that cells that lack some feature share same atributes and thus they are related, which is, in many cases, not true.
+Additionally, cells that do share a common attribute may only be disstantly related. Another way of classifying organisms is by sorting them in one of three domains: bacteria, archaea, and eucarya.
+</p>
+
+<p>
+Cells come in various shapes and sizes, some of the smallest bacterial cells are about <i>0.2-0.3</i> &micro;m in diameter, on the other hand there are elongated nerve cells which may extend to several meters in size.
+Another example of the large cell is a birds egg, which is an extremely large single cell. However, these examples are outliers, and most cells fall in more predictable size ranges. Eucaryotic cells are usually
+somwhere between <i>1-5</i> &micro;m, while most animal and higher plant cells are in the range of <i>10-100</i> &micro;m.
+</p>
+
+<p>
+Cells size is determined by several factors:
+</p>
+<dl class="org-dl">
+<dt>Surface area / volume ratio</dt><dd>Cells volume determines the amount of nutrients able to be stored in the cell, and also the amount of material excreted out of the cell. On the other hand
+surface area determines the amount of available surface the cell has to interact with extracellular space, that is the availability of the membranes necessary to handle flow of meterial in and out of the cell.</dd>
+<dt>Diffusion rates of molecules</dt><dd>Cells are limited  by how rapidly can molecules move around the cell. Cells, primarrily move by the means of diffusion. Diffusion is free, unassisted movement of a substance from
+a region of high concentration to a region of low concentration.</dd>
+<dt>Need to maintain adequate concentration of reactants and catalysts</dt><dd>For a chemical reaction to occur in the cell, the appropriate reactants must collide with and bind to a particular enzyme. The rate of
+collision will be gratlly improved with the increase in substance's concetration within the cell.</dd>
+</dl>
+
+<p>
+An effective proble to the concentration problem is the <i>compartmentalisation of activities</i> within a speciffic region of the cell. High concentration of a substances is neede only in those particular region,
+rather than, throughout the cell. To compartmentalise activities, most euaryotic cells have a variety of organelles, wich are membrane bounded compartments inside the cell, specialised for a speciffic functions.
+</p>
+</div>
+
+<div id="outline-container-orge1e807b" class="outline-3">
+<h3 id="orge1e807b"><span class="section-number-3">4.1.</span> Eucaryotic Cell Organells</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Most Eucaryotic cells use <i>compartmentalisation</i> extensively in order to conduct the cellular functions within certain regions of the cell, and thus increase efficiency. Typical eucaryotic cell will have at least
+four major structural features:
+</p>
+<ol class="org-ol">
+<li>External <i>plasma membrane</i>,</li>
+<li>Nucleus, for housing the DNA,</li>
+</ol>
+<p>
+3, Membrane bounded <i>organells</i>.
+</p>
+</div>
+
+
+<div id="outline-container-org105fbc3" class="outline-4">
+<h4 id="org105fbc3"><span class="section-number-4">4.1.1.</span> Plasma membrane</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Plasma membrane is a structure that envelops every cell. It defines the boundaries of the cell, ensuring that the contents of the cell are retained, as well as keeping unnecessary, potentialy harmful, substances
+outside of the cell. The plasma membrane consists of phospholipids, other lipids, and proteins. Plasma membrane is organised into two layers. Each phospholipid molecules consists of two hydrophobic tails, and a
+hydrophillic head at the center. These molecules orient themselves, so that hydrophobic layer faces inside of the cell, while hydrophillic layer is oriented outwards.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5200384" class="outline-4">
+<h4 id="org5200384"><span class="section-number-4">4.1.2.</span> Nucleus</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+The nucleus serves as the cell's information center. Inside, separated by a membrane, are the DNA bearing chromosomes of the cell. The membrane around the cell consists of the parts; <i>inner</i> and <i>outer</i>
+<i>nuclear membrane</i>. Together these membranes form the nuclear envelope. The envelope has numerous small openings called spores, through which water-soluable molecules can move between the nucleus and the
+cytoplasm. The pores are lined with the transport engine called <i>pore complex</i> which regulates the movement through the pores. Nucleolus is also present in the nucleus, which is a structure responsible for
+the sinthesys and assembly of some of the RNA.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ff2939" class="outline-4">
+<h4 id="org0ff2939"><span class="section-number-4">4.1.3.</span> Cytoplasm</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+The interion volume of the cell, exclusive of the nucleus is called cytoplasm. Cytoplasm is occupied by various organells, and cytosol, a semi-fluid substance in which the organells are suspended.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc93be16" class="outline-4">
+<h4 id="orgc93be16"><span class="section-number-4">4.1.4.</span> Mitochondrion</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+Mitochondria are found in all eucaryotic cells and are the site of aerobic respiration. Mitochondria are large organells. Each eucaryotic cell has hundreds of mitochondria. Each mitochondrion is surrounded by two
+membranes, dessignated <i>inner and outer mitochondrion membrane</i>. Located in mitochondria are small, circular molecules of the DNA that encode some of the RNAs into proteins needed for mitochondria. Mitochondrioal
+function is to oxidise sugar into carbon dioxide, extracting energy from food molecules and conserving it as <b>adenosine triphosphate</b> <i>(ATP)</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3342d8c" class="outline-4">
+<h4 id="org3342d8c"><span class="section-number-4">4.1.5.</span> Chloroplast</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<p>
+The cloroplast is the site of <i>photosynthesis</i> in plants and algae. Chloroplast is another large organelle. Chloroplast, also, has a bilayered membrane. Inside the chloroplast there is a thrid membrane system
+consisting of flattened sacs, called <b>thylakoids</b>, and the membranes <b>stroma thylakoids</b>, that interconnect them. Together they are stacked to form the <b>granum</b> of the chloroplast. Chloroplast is found in leaves
+and other photosynthetic tissues of plants. Their function is to reduce carbon dioxide into sugar, a reverse process of the reaction inside mitochondrion. Along with some other processes, like conversion of NO3
+into NH3, the from of nitrogen required for protein synthesis. Chloroplast contain green pigment, which gives a characteristic green color to the plants.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org474874f" class="outline-4">
+<h4 id="org474874f"><span class="section-number-4">4.1.6.</span> Endosomatic Reticulum</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<p>
+Extending through the cytoplasm is a network of membranes called <i>endosomatic reticulum</i> (ER). ER consists of tubular membranes and flattened sacs, or <b>cisternae</b>, that are interconnected. The internal space
+enclosed by the ER membranes is called the <b>lumen</b>. The ER is continous with the outer membrane of the nuclear envelope. ER can be:
+</p>
+<dl class="org-dl">
+<dt>rough ER</dt><dd>stubbed with ribosomes on the side of the membrane that faces the cytosol. These ribosomes are synthesising polypeptides. Many, but not all, proteins, such as membrane proteins
+and many secreted proteins are synthesised this way.</dd>
+<dt>smooth ER</dt><dd>has no role in the protein sythesis, and therefore has no ribosomes, hence the smooth appearance. Smooth ER is involved in the sythesis of lipids and steroids.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orga1245d5" class="outline-4">
+<h4 id="orga1245d5"><span class="section-number-4">4.1.7.</span> Golgi Complex</h4>
+<div class="outline-text-4" id="text-4-1-7">
+<p>
+Related to the ER in location and function. Made up od flattened sacs, plays an important role in processing and packaging secretory proteins and in synthesising complex polysaccharides.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8d7508" class="outline-4">
+<h4 id="orgc8d7508"><span class="section-number-4">4.1.8.</span> Sectretory Vesicles</h4>
+<div class="outline-text-4" id="text-4-1-8">
+<p>
+Once processed by golgi apparatus, secretory proteins and other substances intended for secretion are packaged into secretory vesicles. They are then released from the cell in the process of <i>exocytosis</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc998a49" class="outline-4">
+<h4 id="orgc998a49"><span class="section-number-4">4.1.9.</span> Lysosome</h4>
+<div class="outline-text-4" id="text-4-1-9">
+<p>
+Lysosomes are surrounded by a single membrane. They are used by the cell to store <b>hydrolases</b>, enzymes responsible for digestion of speciffic molecules, such as proteins, carbohydrates, fats&#x2026;
+While cells need such enzymes, they must be sequestered as to not to damage the cell intself.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org79ba045" class="outline-4">
+<h4 id="org79ba045"><span class="section-number-4">4.1.10.</span> Peroxisome</h4>
+<div class="outline-text-4" id="text-4-1-10">
+<p>
+Peroxismoes resemble lysosome in their structure. They perform several distinct functions, depending on the cell type, but the have a common property in that they generate and also degrade <i>hydrogen peroxide</i>.
+Hydrogen peroxide is highly toxic to the cell, but it can be decomposed into oxygen by the enzyme <b>catalase</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1babe9" class="outline-4">
+<h4 id="orga1babe9"><span class="section-number-4">4.1.11.</span> Vacuole</h4>
+<div class="outline-text-4" id="text-4-1-11">
+<p>
+Some cells contains another type of membrane-bounded organelle, in animal and yeast cells thay are used for temporary storage and transport of materials.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb012140" class="outline-4">
+<h4 id="orgb012140"><span class="section-number-4">4.1.12.</span> Ribosome</h4>
+<div class="outline-text-4" id="text-4-1-12">
+<p>
+Rybosome is not a real organelle since it is not bounded by a membrane. However, they do play an importan role in the cell and they do have a specialised function within the cell. They are found in all cells, but
+they differ from size and number, depending on the cell type. They play an important role in protein sythesis. They are made of protein and RNA.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org21a2cb1" class="outline-4">
+<h4 id="org21a2cb1"><span class="section-number-4">4.1.13.</span> Extracellular Matrix</h4>
+<div class="outline-text-4" id="text-4-1-13">
+<p>
+ECM primarily consists of <b>collagen fibers</b> and <b>proteoglycans</b>. ECM is a structure that give physical support to the cells making up a particular tissue. This structure connects cells to eachother and
+facillitates communication among those cells.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3455f8f" class="outline-4">
+<h4 id="org3455f8f"><span class="section-number-4">4.1.14.</span> Cell Wall</h4>
+<div class="outline-text-4" id="text-4-1-14">
+<p>
+Cell Wall is a structure consisting of the rigid fibers, mainly <b>cellulose microfibrils</b> embeded in a matrix with other polysaccharides and small amount of protein. They are a extracellular structure present in
+plant and fungal cells.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5440b5b" class="outline-4">
+<h4 id="org5440b5b"><span class="section-number-4">4.1.15.</span> Cytoskeleton</h4>
+<div class="outline-text-4" id="text-4-1-15">
+<p>
+The cytoskeleton is an extensive network of microtubules, microfillaments, and intermidiate fillaments that giveeucaryotic cells their distinctive shapes. The cytoskeleton is also important in cellular mobility
+and the intercellular movement of cellular structures and materials.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org25c01d9" class="outline-2">
+<h2 id="org25c01d9"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> Microscopy</h2>
+</div>
+
+<div id="outline-container-orgdcd6002" class="outline-2">
+<h2 id="orgdcd6002"><span class="section-number-2">6.</span> Flow of Energy in the Cell</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Energy is the capacity to do work. Another definition of energy is that enery is the capacity to cause speciffic physical or chemical changes. There are six cathegories of change within cell, and six kinds of
+work that require an output of energy:
+</p>
+<dl class="org-dl">
+<dt>Synthetic work</dt><dd>Important work within every cell is work of <b>biosythesis</b>. This work results in the formation of new chemical bonds and synthesis of new molecules. Also, synthetic work is necesary to maintain
+existing cellular structures.</dd>
+<dt>Mechanical work</dt><dd>Cells often need for <b>mechanical work</b> which involves physical changes in the position or orientation of the cell, or structures within the cell.</dd>
+<dt>Concentration work</dt><dd>The purpose of this kind of work is to either accumulate substances within a cell or organelle or to remove potentionaly toxic byproduct of cellular activity.</dd>
+<dt>Electrical work</dt><dd>A specialised case of concentration work, as it requires movement acreos membranes, but in this case the movement in question includes ions and the result is not just change in concentration,
+but also a change in charge difference, or <i>electric potential</i>.</dd>
+<dt>Generation of heat</dt><dd>Heat is released as byproduct of many chemical reactions.</dd>
+<dt>Generation of light</dt><dd>Another way cells use energy is the production of light, or <b>bioluminesence</b>. Light is produced by variety of bioluminescent organisms and is generated by the reaction of ATP with
+specific luminescent compounds.</dd>
+</dl>
+
+<p>
+Nearly all life on Earth is sustained, either directly or indirectly, by the sunlight. Not all organisms can obtain energy from the sunlight directly. Based on their energy sources, organisms can be classified
+as <b>phototrophs</b> or <b>chemotrophs</b>. Furthermore, organisms can also be classiied as <b>autotrophs</b> or <b>heterotrophs</b>. Depending on wether their source of carbon is carbon dioxide or organic molecules, respectively.
+Most organism are either <i>photoautotrophs</i> or <i>chemoheterotrophs</i>.
+</p>
+
+<p>
+Organism can obtain energy either from sunlught or from oxidation of chemical compounds.
+</p>
+
+<p>
+The principles governing energy flow are subject of an area of science called thermodynamics. Energy distributed through the universe is constant and consistent. Energy gets transformed from one from to another.
+Energy is organised in <i>systems</i>, which can be either <i>open</i> or <i>closed</i>, and the rest of the universe, outside of the system, is termed the <i>surroundings</i>. Closed system is energy system that cannot exchange
+exchange energy with the system, energy cannot be added or removed from the system. Closed system is an energy system that can exchange energy with the surroundings. Organisms are open systems.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org7f65ae6"></a><span class="todo TODO">TODO</span> Finish reeding chapter 5<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orga3bba5e" class="outline-2">
+<h2 id="orga3bba5e"><span class="section-number-2">7.</span> Enzymes: The Catalyst of Life</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Thermodynamics alow for the assessment of the feasabillity of a reaction, it says nothing about the likelyhood that the reaction will actually occur at a reasonable rate in the cell. For a given chemical reaction
+to occur in the cell, substrates must react the transition state, which has a higher free energy than either the substrates or product. Reaching transition state requires the input of activation energy. Because of
+this activation energy barrier, most biologycal compounds exist in an unreactive, metastable state. To ensure that the activation energy requirement is met and the transition state is achieved, a catalyst is
+required, which is always an enzyme in biologycal systems.
+</p>
+
+<p>
+Catalysts, wether organic or inorganic, act by forming transient complexes with substrate molecules that lower the activation energy barrier and increase the rate of a particular reaction. Chemical reactions in
+cells are catalysed by enzymes, which in some cases require organic or inorganic cofactors for activity. The vast majority of enzymes are proteins. Few enzymes are composed of RNA and are called ribozymes.
+Enzymes are very soecific, either for a single specific substrate or for a class of closely realated compounds. This is because the actual catalytic process takes place at the active site, a pocket gooce on the
+enzyme surface that only the correct substrate will fall into. The active site is composed of specific, noncontignous amino accids that become positioned near each other as the protein folds into its tertiery
+structure. These amino accids are responsible for substrate binding, substrate activation, and catalysis. Binding the appropriate substrate at the active site causes a change in the shape of the enzyme and
+substrate known as induced fit. This facilitates substrate activation, often by distorting one or more bonds in the substrate, by bringing necessary amino accid side chainsinto the active site, or by transferring
+protons and possibly electrons between the enzyme and substrate. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd55a4a2" class="outline-2">
+<h2 id="orgd55a4a2"><span class="section-number-2">8.</span> Membranes: Their Structure, Function and Chemistry</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+One of the most obvious functions of membranes is to define boundaries of cells and its compartments and to serve as permeability barriers. The permeability barrier for the cell as a whole
+is  the <b>plasma</b> (or <b>cell</b>) <b>membrane</b>, a membrane that surroundes the cell and regulates the passage of materails both in and out of the cell. In addition to cell membrane, various
+<b>intercellular membranes</b> serve to compartmentalise functions within eucaryotic cells.
+</p>
+
+<p>
+Membranes have specific functions associated with them because the molecules and structures responsible for those functions&#x2013;proteins, in most cases&#x2013;are either embeded in or localised in
+membranes. One of the most usefule ways to characterise a specific membrane is to describe the particular <i>enzymes</i>, <i>transport proteins</i>, <i>receptors</i>, and other molecules associated
+with it. Other functions associated with specific membranes are a direct result of the particular proteins present in these membranes.
+</p>
+
+<p>
+Another function of membrane proteins is to carry out and regulate the <i>transport</i> of substances into and out of cells and their organelles. While small, lipophillic molecules can diffuse
+directly across cellular membranes, most molecules needed by the cell require transport protein that can recognise and transport a specific mole or a group of similar molecules.
+</p>
+
+<p>
+Cells recieve information from their environment, usually in the form of electrical or chemical signals that impinge on the outer surface of the cell. <i>Signal trasduction</i> is the term used
+to denote the specific mechanisms for the transmission of the signals from the outer surface of the cells to the cell interior. Many signal molecules bind to specific membrane proteins
+known as <i>receptors</i>. Binding of the signal molecules to the signal receptors on the inner surface of the cell membrane causes the change in the cell's function.
+</p>
+
+<p>
+Membrane proteins also mediate adhesion and communication bethween adjecent cells. During the cellular division, proteins called <i>cadherins</i> enable cell-to-cell communication. Membrane
+proteins such as <i>anakryn</i> can serve as point of attachments to the cell's cytoskeleton, thus adding rigidity to the tissues.
+</p>
+
+<p>
+The main classes of membrane lipids are phospholipids, glycolipids, and sterols. Most abundant among the are, however, phospholipids. Membranes contain many different kinds of
+phospholipids, including <i>glycerol-based</i> <b>phosphoglycerides</b>, and the <i>sphingosine-based</i> <b>sphingolipids</b>. Most common phosphoglycerides are <i>phosphatidylcholine</i>,
+<i>phosphatidylethanolamine</i>, <i>phosphatidylserine</i>, and <i>phosphatidyllinositol</i>.
+</p>
+
+<p>
+Glycolipids are formed by combining  carbohydrate groups to lipids. Some glycolipids are <i>glycerol</i> based and others are derivatives of sphingosine and are therefore called
+<i>glycosphingolipids</i>. The most common examples are <i>cerebrosides</i> and <i>gangliosides</i>. Cerebrosides are called neutral glycolipids because each molecule has a single uncharged sugar as
+its head group—galactose, in the case of the <i>galactocerebroside</i>. Cerebrosides and gangliosides are especially prominent in the membranes of brain and nerve cells.
+Gangliosides exposed on the surface of the plasma membrane also function as antigens recognized by antibodies in immune reactions, including those responsible for blood group interactions.
+The human <b>ABO blood groups</b>, for example, involve glycosphingolipids known as <i>A antigen</i> and <i>B antigen</i> that serve as specific cell surface markers of the different groups of
+red blood cells. Cells of <b>blood type A</b> have the A antigen, and cells of <b>blood type B</b> have the B antigen. <b>Type AB</b> blood cells have both antigen types, and <b>type O</b> blood cells have neither.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9bb7131" class="outline-2">
+<h2 id="org9bb7131"><span class="section-number-2">9.</span> Transport Across Membranes: Overcoming the Permeability Barrier</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+An essentiall feature of every cell and subcellular compartment is the abillity to accumulate a variety of substances at a concentrations that are often far higher than in the surrounding
+environment. These molecules can be macromolecules such as DNA, RNA and proteins. However, Most of these molecules transported across cellular membrane are solutes such as dissolved gases,
+ions, and small organic molecules. Very few cellular reactions could occur at a reasonable rate if the cells would rely on the low contcentrations of the present substrates. Therefore,
+<b>transport</b> is the central function within the cell, that is to selectively move ions and organic molecules.
+</p>
+</div>
+
+<div id="outline-container-org53997af" class="outline-3">
+<h3 id="org53997af"><span class="section-number-3">9.1.</span> Simple Diffusion</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+The sipmlest way for a solute to get from one side of a membrane to another is <i>simple diffusion</i>, which is an unassisted movement of solutes from the region of high concentration to the
+region of low concentration. Since the cellular membranes have a hydrophobic interior, simple diffusion is a mean of transport mostly for gases, nonpolar molecules, or small polar molecules,
+such as water, glycerol, or ethanol. The diffusion tends to create a solution in which the concentration is uniform throughout the solute, regardless of the initial distribution of molecules
+and their concentrations. Another way to explain simple diffusion is to say that it always tends towards minimum free energy. The driving force of the diffusion is entropy, randomisation of
+molecules as the concentrations equalise on both sides of the membrane. Therefore, diffusion always proceeds from the regin of higher free energy to regions of lower free energy.
+</p>
+
+<p>
+The simple diffusion is limited by:
+</p>
+<dl class="org-dl">
+<dt>molecule size,</dt><dd></dd>
+
+<dt>molecule polarity,</dt><dd></dd>
+
+<dt>molecule charge,</dt><dd></dd>
+
+<dt>concetration gradient</dt><dd>affects the rate at which the diffusion occurs</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgf5ceed6" class="outline-3">
+<h3 id="orgf5ceed6"><span class="section-number-3">9.2.</span> Assisted Diffusion</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+Most substances are too large or too polar to cress the permeability membrane at a reasonable rate via the means of simple diffusion. Such solutes can move in and out of the cell and
+organelles at appreciable rates only with the assistance of the <i>transportation proteins</i> that mediate the movement of solute molecules across the membrane. If such process is <i>exergenic</i>
+it is called facilitated diffusion. This is because the solute diffuses along the concentration gradient. The assisted diffusion still tends towards minimum free energy. There is no input
+of energy for the assisted diffusion. The role of the transport proteins is to provide a path through the hydrophobic lipid bilayer. Transport proteins involved in the diffusion of small
+molecules and ions are integral membrane proteins that contains from several to many transmembrane segments and therefore traverse the membrane multiple times. Functionally these proteins
+fall into two main classes.
+</p>
+<dl class="org-dl">
+<dt>Carier proteins</dt><dd>also called <i>transportees</i> or <i>permeases</i> bind one or more solute molecules on one side of the membrane and then undergo a conformational change that transfers
+the solute to the other side of the membrane.</dd>
+<dt>Channel proteins</dt><dd>form <i>hydrophillic channels</i> through the membrane that allow the passage of solutes without major change in the conformation of the protein. Some of these channels are
+relatively large and nonspecific, such as <i>pores</i>. However, most channels are small and extremely selective. Most of these smaller are involved in the transport of ions rather than
+molecules and are therefore referred to as <i>ion channels</i>.</dd>
+</dl>
+
+<p>
+Another of carrier proteins is that they share with proteins is <i>specificity</i>. Like proteins transport proteinsare highly specific, often for a single compound or a small group of compounds
+and sometimes even for a specific stereoisomer. This specificity is a result of the precise stereochemical fit between the slute and its binding site on the carrier protein. Thus the
+properties of carrier proteins explain the characteristic features of facilitated diffusion:
+</p>
+<ul class="org-ul">
+<li>movement of polar molecules and ions down the concentration gradient,</li>
+<li>specificity for the particular substrate transported,</li>
+<li>ability to be saturated at high levels of substrate,</li>
+<li>sensitivity to specific inhibitors of transport.</li>
+</ul>
+
+<p>
+Carrier proteins become saturated as the concentration of the transportable solute is raised. This is because of the number of transport proteins is limited and each transport protein is
+limited, and each tranport protein functions at some finite maximum velocity. As a result, carrier-facilitated transport, like enzyme catalysis, exhibits <i>saturation kinetics</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3c694d5" class="outline-3">
+<h3 id="org3c694d5"><span class="section-number-3">9.3.</span> Active Transport</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+Facilitated diffusion is an important mechanism that increases the rate at which tha transportation occurs. However it can only move the solute down tha gradient, or in other words towards
+the <i>equilibrium</i>. When a subsance needs to be transported against the equilibrium, up the concentration or electrochemical gradient, the mechanism accounting for this movement is called
+<b>active transport</b>. Because this process moves the solute against the concentration gradient it requires input of energy. Active tranport combines this thermodynamically unfavorable process
+with an exorgenic process. As a result, membrane proteins involved in active transport must provide mechanisms both for the movement of the desired solute molecules across the membrane, as
+well as coupling such movements to energy-yielding reactions.
+</p>
+
+<p>
+Active transport performs three major functions in cells and organelles.
+</p>
+<ol class="org-ol">
+<li>Makes possible the uptake of essential nutrients from the environment or surrounding fluid, even when their concentration within the cell is already higher.</li>
+<li>It allows various substances, such as secretory products and waste materials, to be removed from the cell or organelle, even when the concentration outside is grater than the
+concentration inside the cell.</li>
+<li>Enables the cell to maintain constant nonequilibrium intercellular concentrations of specific inorganic ions.</li>
+</ol>
+
+<p>
+The ability to create internal cellular environments that achieve and maintain nonequilibrium conditions is a crucial feature of acrive transport. This is contrasted by the simple or
+assisted diffusion which achieves same concentration on the both sides of the membrane.
+</p>
+
+<p>
+Another important distinction is the direction of of transport. Simple and assisted diffusion are both <i>nondirectional</i> with respect to the membrane. For both types of diffusion, solutes
+can move in either direction, depending on the concentration. Active transport has an intristic <i>directionality. An active transport system that moves a solute across membrane in one
+direction will usually not move that solute in other direction. Therefore active transport is also said to be an /unidirectional process</i>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b74773" class="outline-2">
+<h2 id="org5b74773"><span class="section-number-2">10.</span> The Structural Basis of Cellular Information</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+A segment of a DNA that contains information for the production of a specific RNA molecule od protein is called a <i>gene</i>. A single DNA
+molecule is composed of thousands of genes. Usually a gene is tracribed into RNA, which is than translated into a protein.
+These instructions are used by the cell to build and maintain the body's tissues and organs, and to control various cellular processes.
+Genes are inherited from our parents and determine our characteristics such as eye color, hair color, and height.
+They also play a role in the development of diseases such as cancer and genetic disorders.
+</p>
+</div>
+
+<div id="outline-container-orgb9cad50" class="outline-3">
+<h3 id="orgb9cad50"><span class="section-number-3">10.1.</span> Chromosomes</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+A <i>chromosome</i> is a long, linear strand of DNA that contains many genes. Chromosomes are found in the nucleus of a cell and are made up of
+both DNA and proteins. Humans have \(23\) pairs of chromosomes, for a total of \(46\), which carry the genetic information that determines our
+traits and characteristics. Chromosomes are also responsible for the proper replication and distribution of genetic information during
+cell division. They can be visualized under microscope during certain phase of cell cycle and have characteristic shape and banding
+patterns that can be used to identify them. Abnormalities in chromosome number or structure can lead to genetic disorders or birth defects.
+</p>
+</div>
+
+<div id="outline-container-org990bc91" class="outline-4">
+<h4 id="org990bc91"><span class="section-number-4">10.1.1.</span> Karyotype</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<p>
+A karyotype is a visual representation of the complete set of chromosomes in a cell, arranged in a standard format. The chromosomes are
+arranged by size, shape, and centromere position, and are often color-coded to distinguish between the different types.
+</p>
+
+<p>
+A karyotype is typically used to study and diagnose chromosomal abnormalities, such as Down syndrome or Turner syndrome, which are caused
+by changes in the number or structure of chromosomes. It can also be used to identify chromosomal disorders that are not visible through
+a microscope, such as certain types of cancer.
+</p>
+
+<p>
+The preparation of a karyotype involves taking a sample of cells, usually from blood, bone marrow, or amniotic fluid, and then treating
+the cells with a solution that stops cell division and spreads the chromosomes out on a slide. The chromosomes are then stained and
+photographed, and the resulting image is used to construct the karyotype.
+</p>
+
+<p>
+Karyotyping is an important diagnostic tool in genetics, obstetrics, and oncology. It can also be used to study the evolution of different
+species by comparing the number and arrangement of chromosomes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc849d6e" class="outline-4">
+<h4 id="orgc849d6e"><span class="section-number-4">10.1.2.</span> Chromatid</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<p>
+A <i>chromatid</i> is one of the two identical copies of a chromosome that are formed during cell division. Chromatids are formed during the
+process of replication, in which the DNA of a chromosome is duplicated. The two copies of the chromosome then line up alongside each
+other, held together by a structure called the centromere. This pair of identical copies is called a <i>chromatid pair</i>. Once replication
+is completed, each chromatid pair is composed of two sister chromatids. The sister chromatids will be separated during the next stage
+of cell division, mitosis or meiosis, and will go to different daughter cells.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3d183cb" class="outline-4">
+<h4 id="org3d183cb"><span class="section-number-4">10.1.3.</span> Chromosome Types</h4>
+<div class="outline-text-4" id="text-10-1-3">
+<p>
+Chromosomes can be:
+</p>
+<dl class="org-dl">
+<dt>Diploid \((2n)\)</dt><dd>they have two sets of chromosomes, they are found in <i>autosomes</i>, non-sex cells in the organism's body.</dd>
+<dt>Haploid \((n)\)</dt><dd>thy contain one set of chromosomes, most animals, including humans, only haploid cells are sperm cells and egg cells
+(sex cells).</dd>
+</dl>
+
+<p>
+When it comes to sex-cells they are called <b>gametes</b>, sperm or egg cell, when the two gametes, a sperm cell and an egg cell fuse, they form
+<b>zygote</b>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc04408" class="outline-4">
+<h4 id="orgfc04408"><span class="section-number-4">10.1.4.</span> Homologous Chromosomes</h4>
+<div class="outline-text-4" id="text-10-1-4">
+<p>
+Homologous chromosomes are pairs of chromosomes that have the same genes in the same order, but may have different versions of those genes.
+Each pair of homologous chromosomes contains one chromosome inherited from the mother and one from the father.
+These chromosomes are similar in size, shape, and gene content.
+</p>
+
+<p>
+Homologous chromosomes are pairs of chromosomes that have the same size, shape, and genetic information. They are also known as <i>homologs</i>.
+In humans, there are \(23\) pairs of homologous chromosomes, for a total of \(46\). One member of each pair is inherited from the mother,
+the other from the father. Each homologous chromosome carries the same set of genes in the same order, but the <i>alleles</i>, or variations
+of the genes, can be different between the two homologs. This is how organisms inherit different traits from their parents parents.
+</p>
+
+<p>
+Homologous chromosomes are important because they allow for the creation of genetic diversity in offspring, which is essential for
+evolution. Understanding the role of homologous chromosomes in genetic diversity is crucial in fields such as genetics,
+evolutionary biology, and medicine.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org83ee417" class="outline-3">
+<h3 id="org83ee417"><span class="section-number-3">10.2.</span> Histones</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+<i>Histones</i> are a family of proteins that play an important role in the organization and regulation of DNA in the cell. They act as spools
+around which the DNA is wound, forming structures called <i>nucleosomes</i>. This compact packaging of DNA helps to fit the large amount of
+genetic material into the small space of the cell nucleus. The tight winding of DNA around histones also plays a role in regulating gene
+expression by making certain regions of the genome more or less accessible to the molecular machinery that reads and transcribes the
+DNA into RNA. Histones can also be chemically modified by the addition of various molecules such as acetyl groups, methyl groups, and
+others. These modifications can further influence the accessibility of the DNA and can also be used to mark certain regions of the genome
+for specific activities such as repair or replication.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0db2d9e" class="outline-2">
+<h2 id="org0db2d9e"><span class="section-number-2">11.</span> Cell Cycle, Cellular Replication</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Somatic reproduction, or cell division is an important process in a life of an organism. This process enables the <i>continuity of life</i>.
+</p>
+</div>
+
+<div id="outline-container-org9621ee3" class="outline-3">
+<h3 id="org9621ee3"><span class="section-number-3">11.1.</span> Phases of the Cell Cycle</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+The cell cycle is the series of events that occur in a cell leading to its division and duplication (replication).
+These events can be divided into two main stages: <i>interphase</i> (G1, S, G2) and the <i>mitotic</i> phase (M).
+</p>
+
+<dl class="org-dl">
+<dt>Interphase</dt><dd>is the stage in which the cell grows and replicates its DNA. It is divided into three stages:
+<ol class="org-ol">
+<li>G1 phase: during this stage, the cell grows and performs its normal functions.</li>
+<li>S phase: during this stage, the DNA is replicated in preparation for cell division.</li>
+<li>G2 phase: during this stage, the cell checks for any DNA damage and repairs it before proceeding to the mitotic phase.</li>
+</ol></dd>
+<dt>Mitotic phase</dt><dd>is the stage in which the cell physically divides into two daughter cells. This stage is also known as <i>mitosis</i> and
+it is divided into four stages:
+<ol class="org-ol">
+<li>prophase,</li>
+<li>metaphase,</li>
+<li>anaphase, and</li>
+<li>telophase.</li>
+</ol></dd>
+</dl>
+
+<p>
+The cell cycle is a complex and tightly regulated process, controlled by both internal and external signals. It is an essential process
+for the growth and repair of tissues, and also for the reproduction of organisms.
+</p>
+
+<p>
+Dysregulation of the cell cycle can lead to the development of cancer and other diseases. Understanding the cell cycle is essential for
+the development of cancer therapies and other medical treatments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge144b0e" class="outline-3">
+<h3 id="orge144b0e"><span class="section-number-3">11.2.</span> Mitosis</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+Mitosis is the process by which a cell divides and replicates its chromosomes. It results in the formation of two identical daughter
+cells, each with the same number of chromosomes as the parent cell.
+</p>
+
+<p>
+The phases of mitosis are:
+</p>
+<dl class="org-dl">
+<dt>Prophase</dt><dd>the chromosomes condense and become visible. During prophase, the chromatin in the cell condenses into visible chromosomes,
+each consisting of two identical sister chromatids joined at a <i>centromere</i>.</dd>
+<dt>Metaphase</dt><dd>the chromosomes align in the center of the cell. In metaphase, the chromosomes align at the equator of the cell, also
+known as the metaphase plate, with the help of microtubules from the spindle apparatus.</dd>
+<dt>Anaphase</dt><dd>the chromosomes are pulled apart by the spindle fibers to opposite ends of the cell. In anaphase, the sister chromatids are
+separated from each other at the centromeres and pulled to opposite poles of the cell by the spindle fibers.</dd>
+<dt>Telophase</dt><dd>the chromosomes decondense and the cell divides. In telophase, the chromosomes decondense and the cell divides into two
+identical daughter cells during <i>cytokinesis</i>.</dd>
+</dl>
+
+<p>
+This process ensures that each daughter cell receives the correct number of chromosomes.
+</p>
+</div>
+
+<div id="outline-container-org810af73" class="outline-4">
+<h4 id="org810af73"><span class="section-number-4">11.2.1.</span> Centromere</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<p>
+A centromere is a specific region of a chromosome where the chromatids are held together and it is the point at which the microtubules
+of the spindle apparatus attach during cell division. The centromere is essential for the proper separation of chromosomes during
+mitosis and meiosis. The location, size, and shape of the centromere can vary among chromosomes and can be used to differentiate
+chromosomes and identify them.
+</p>
+
+<p>
+There are two types of centromeres:
+</p>
+<dl class="org-dl">
+<dt>Point centromeres</dt><dd>found in most eukaryotic organisms, this type of centromere is defined by a single point on the chromosome, where
+the kinetochore, a protein complex necessary for the attachment of microtubules, is located.</dd>
+<dt>Regional centromeres</dt><dd>found in certain organisms such as yeasts, this type of centromere is defined by a specific region of the
+chromosome, rather than a single point, and multiple kinetochores are located along this region.</dd>
+</dl>
+
+<p>
+During mitosis and meiosis, the centromeres are responsible for the attachment of the sister chromatids to the spindle fibers and for
+their proper separation to opposite poles of the cell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org16e9f33" class="outline-4">
+<h4 id="org16e9f33"><span class="section-number-4">11.2.2.</span> Mitotic Spindle</h4>
+<div class="outline-text-4" id="text-11-2-2">
+<p>
+The mitotic spindle is a structure that forms during the mitotic phase of the cell cycle, and it is responsible for the proper
+separation of chromosomes during cell division. It is made up of microtubules, which are long, hollow, cylindrical protein fibers,
+and it attaches to the chromosomes at the centromeres. The mitotic spindle is composed of two main regions: the spindle poles and the
+spindle midzone.
+</p>
+
+<p>
+The spindle poles are the two ends of the spindle, which are located at opposite ends of the cell. They are formed by centrosomes,
+which are structures that organize the microtubules. The spindle poles serve as the starting point for the formation of the mitotic
+spindle and as the point of attachment for the microtubules.
+</p>
+
+<p>
+The spindle midzone is the region of the spindle between the poles, where the chromosomes are aligned during metaphase and where the
+microtubules from the poles push and pull the chromosomes to opposite ends of the cell during anaphase.
+</p>
+
+<p>
+The mitotic spindle plays a crucial role in the proper separation of chromosomes during cell division and it's essential for the proper
+function of the cell cycle. The spindle helps to ensure that each daughter cell receives the correct number of chromosomes, which is
+necessary for the proper functioning and growth of the organism.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9cb4965" class="outline-4">
+<h4 id="org9cb4965"><span class="section-number-4">11.2.3.</span> Cytokinesis</h4>
+<div class="outline-text-4" id="text-11-2-3">
+<p>
+Cytokinesis is the process by which the cytoplasm of a cell is divided after mitosis, resulting in the formation of two identical daughter
+cells. It is the final stage of the cell cycle and it occurs in both animal and plant cells.
+</p>
+
+<p>
+In animal cells, cytokinesis occurs by the formation of a contractile ring of actin and myosin filaments around the equator of the cell.
+The ring constricts and eventually pinches the cell in half, separating the cytoplasm into two daughter cells.
+</p>
+
+<p>
+In plant cells, cytokinesis occurs by the formation of a cell plate between the two daughter nuclei. The cell plate eventually develops
+into the cell wall, separating the cytoplasm into two daughter cells.
+</p>
+
+<p>
+Cytokinesis is essential for the proper division and growth of tissues, and also for the reproduction of organisms. It ensures that each
+daughter cell receives the correct amount of cytoplasm, organelles, and molecules for normal function and growth.
+</p>
+
+<p>
+Dysregulation of cytokinesis can lead to the formation of abnormal cells and can contribute to the development of cancer and other diseases.
+Understanding the process of cytokinesis is important for the development of cancer therapies and other medical treatments.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf491318" class="outline-3">
+<h3 id="orgf491318"><span class="section-number-3">11.3.</span> Meiosis</h3>
+<div class="outline-text-3" id="text-11-3">
+<p>
+Meiosis is a type of cell division that occurs in sexually reproducing organisms to produce haploid cells, such as sperm and egg cells,
+from diploid cells. The process of meiosis consists of two rounds of cell division, meiosis I and meiosis II, which results in four
+haploid cells, each with half the number of chromosomes as the parent cell.
+</p>
+
+<p>
+Meiosis I starts with a diploid cell and it's also divided into prophase, metaphase, anaphase, and telophase stages. During prophase I,
+homologous chromosomes pair up and exchange genetic material in a process called crossing over. This leads to genetic diversity in the
+resulting daughter cells. In metaphase I, the chromosomes align at the equator of the cell. In anaphase I, the homologous chromosomes are
+pulled apart to opposite poles of the cell. In telophase I, the cell divides, resulting in two daughter cells, each with a unique
+combination of chromosomes.
+</p>
+
+<p>
+Meiosis II is similar to mitosis, but the cells that are produced are already haploid. In prophase II, the chromosomes condense, and in
+metaphase II, the chromosomes align at the equator of the cell. In anaphase II, the chromosomes are pulled apart to opposite poles of
+the cell, and in telophase II, the cell divides, resulting in four haploid daughter cells.
+</p>
+
+<p>
+Meiosis is important because it allows for the creation of genetic diversity in offspring, which is essential for evolution.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-01-14 Sat 21:25</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

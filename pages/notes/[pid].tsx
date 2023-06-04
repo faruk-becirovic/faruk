@@ -7,9 +7,12 @@ import styles from '../../styles/Notes.module.css';
 
 const font = Oswald({ subsets: ['latin'] });
 
+
 export default function Note() {
   const router = useRouter()
   const { pid } = router.query
+
+  const filename = 'https://faruk-becirovic.github.io/Notes/CellBiology'
 
     return(
 	<>
@@ -29,7 +32,10 @@ export default function Note() {
                 <main
                     className={styles.main + " " + font.className}
                 >
+                    <div className={styles.content}>
                     <p>{pid}</p>
+                    <iframe src={filename} className={styles.frame}></iframe>
+                    </div>
                 </main>
             </Layout>
         </>
